@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Currency Exchange</title>
+    <link rel="stylesheet" href="style_doller_to_rs.css">
+</head>
+<body>
+
+<center><font size="6" color="white"> <h1>Currency Exchange Website</h1> </font></center>
+
+<div id="box">
+
+    <h2>Enter Amount (IN $) : </h2>
+    <input type ="text" id="t1">
+    <button id="b1" onclick = "convert()">Convert</button> <br><br>
+    <h2 style="text-align:center; visibility:hidden;" id="hide">Rupee INR - </h2>
+    <h1 id = "amount" style="text-align:center; color:coral;"></h1>
+    
+
+
+</div>
+
+
+
+</body>    
+</html>
+<script>
+     function convert()
+     {
+         var amt = parseInt(document.getElementById("t1").value ,10);
+         var rs = amt*73.56;
+         var h2 = document.getElementById("amount");
+         h2.innerHTML=rs;
+         document.getElementById("hide").style.visibility="visible";
+    
+     }
+</script>
